@@ -35,13 +35,13 @@ verify() {
 
 if [ "$1" == "--genhash" ]; then
   shift 1
-  users_file=${1-./users}
   case $# in
     3) users_file=$1
        shift 1;;
     2) users_file="./users";;
     *) echo "Incorrect arguments provided";;
   esac
+
   login=$(echo $1 | awk '{print tolower($0)}')
   echo "$login:$(genhash "$login" "$2")" >> $users_file
   chown root:nobody $users_file
