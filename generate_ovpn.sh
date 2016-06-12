@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ##
-## Usage: ./ovpn-writer.sh SERVER CA_CERT CLIENT_CERT CLIENT_KEY SHARED_SECRET > client.ovpn
+## Usage: ./generate_ovpn.sh SERVER CA_CERT CLIENT_CERT CLIENT_KEY SHARED_SECRET > client.ovpn
 ##
 
 server=${1?"The server address is required"}
